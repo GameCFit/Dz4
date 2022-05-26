@@ -1,0 +1,43 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string name;
+        int year;
+        string education;
+        string work;
+        Console.WriteLine("как вас зовут?");
+        name = Console.ReadLine();
+        Console.WriteLine("сколько вам лет?");
+        year = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("какое у вас образование?");
+        education = Console.ReadLine();
+        if (education != "")
+        {
+            Console.WriteLine("кем вы работаете?");
+            work = Console.ReadLine();
+        }
+        else
+        {
+            work = "вы не работаете";
+        }
+
+        Console.Clear();
+
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("ваше имя : " + name);
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("вам : " + year);
+        if(education != "")
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("у вас " + education + " образование ");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("вы работаете " + work);
+        }
+        Console.ForegroundColor = ConsoleColor.White;
+
+    }
+}
